@@ -21,12 +21,11 @@ namespace _2019TobbformosMvcPizzaEgyTabla.model
                    getPhonenumber() +
                    "', '" +
                    getEmail() +
-                   "', '" +
                    "');";
         }
         public string getFutarUpdate(int id)
         {
-            return "UPDATE `futarok` SET `futaroknev` = '" +
+            return "UPDATE `futarok` SET `futarnev` = '" +
                 getName() +
                 "', `futarlakcim` = '" +
                 getAddress() +
@@ -34,7 +33,7 @@ namespace _2019TobbformosMvcPizzaEgyTabla.model
                 getPhonenumber() +
                 "', `futaremail` = '" +
                 getEmail() +
-                "' WHERE `futaork`.`futarazon` = " +
+                "' WHERE `futarok`.`futarazon` = " +
                 id;
         }
 

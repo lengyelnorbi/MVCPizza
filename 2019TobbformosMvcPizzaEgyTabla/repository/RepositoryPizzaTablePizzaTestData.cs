@@ -69,11 +69,11 @@ namespace TobbbformosPizzaAlkalmazasEgyTabla.Repository
 
                 string query =
                     "INSERT INTO `futarok` (`futarazon`, `futarnev`, `futarlakcim`, `futartelszam`, `futaremail`) VALUES " +
-                            " (1,Dani,'Szeged, Sztriha Kálmán utca 18', 06200000000, lengyelnorbi5@gmail.com), " +
-                            " (2,Dani,'Szeged, Sztriha Kálmán utca 18', 06200000000, lengyelnorbi5@gmail.com), " +
-                            " (3,Dani,'Szeged, Sztriha Kálmán utca 18', 06200000000, lengyelnorbi5@gmail.com), " +
-                            " (4,Dani,'Szeged, Sztriha Kálmán utca 18', 06200000000, lengyelnorbi5@gmail.com), " +
-                            " (5,Dani,'Szeged, Sztriha Kálmán utca 18', 06200000000, lengyelnorbi5@gmail.com); ";
+                            " (1,'Dani','Szeged Sztriha Kálmán utca 18', '06200000000', 'lengyelnorbi5@gmail.com'), " +
+                            " (2,'Dani','Szeged Sztriha Kálmán utca 18', '06200000000', 'lengyelnorbi5@gmail.com'), " +
+                            " (3,'Dani','Szeged Sztriha Kálmán utca 18', '06200000000', 'lengyelnorbi5@gmail.com'), " +
+                            " (4,'Dani','Szeged Sztriha Kálmán utca 18', '06200000000', 'lengyelnorbi5@gmail.com'), " +
+                            " (5,'Dani','Szeged Sztriha Kálmán utca 18', '06200000000', 'lengyelnorbi5@gmail.com'); ";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

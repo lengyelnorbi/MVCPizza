@@ -61,6 +61,7 @@ namespace _2019TobbformosMvcPizzaEgyTabla
                 rtp.createTablePizza();
                 rtp.createTableFutar();
                 rtp.fillPizzasWithTestDataFromSQLCommand();
+                rtp.fillFutarokWithTestDataFromSQLCommand();
             }
             catch (Exception ex)
             {
