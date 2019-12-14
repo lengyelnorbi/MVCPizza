@@ -73,6 +73,11 @@
             this.buttonFutarMegse = new System.Windows.Forms.Button();
             this.buttonUjFutar = new System.Windows.Forms.Button();
             this.panelFutar = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxFutarEmail = new System.Windows.Forms.TextBox();
             this.textBoxFutarTelszam = new System.Windows.Forms.TextBox();
             this.textBoxFutarLakcim = new System.Windows.Forms.TextBox();
@@ -86,11 +91,10 @@
             this.tabPageMegrendelok = new System.Windows.Forms.TabPage();
             this.errorProviderPizzaName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPizzaPrice = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.errorProviderFutarNev = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFutarLakcim = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFutarTelszam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderFutarEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStripStatus.SuspendLayout();
             this.toolStripToolbar.SuspendLayout();
@@ -105,6 +109,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFutar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarNev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarLakcim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarTelszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -161,7 +169,7 @@
             // többtöbbKapcsolatToolStripMenuItem
             // 
             this.többtöbbKapcsolatToolStripMenuItem.Name = "többtöbbKapcsolatToolStripMenuItem";
-            this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
+            this.többtöbbKapcsolatToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.többtöbbKapcsolatToolStripMenuItem.Text = "Több-több kapcsolat";
             // 
             // tesztadatokToolStripMenuItem
@@ -169,7 +177,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -521,6 +529,51 @@
             this.panelFutar.TabIndex = 18;
             this.panelFutar.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Email:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Telefonszam:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Lakcím:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Név:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Azonositó:";
+            // 
             // textBoxFutarEmail
             // 
             this.textBoxFutarEmail.Location = new System.Drawing.Point(83, 117);
@@ -626,50 +679,21 @@
             // 
             this.errorProviderPizzaPrice.ContainerControl = this;
             // 
-            // label1
+            // errorProviderFutarNev
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Azonositó:";
+            this.errorProviderFutarNev.ContainerControl = this;
             // 
-            // label2
+            // errorProviderFutarLakcim
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Név:";
+            this.errorProviderFutarLakcim.ContainerControl = this;
             // 
-            // label3
+            // errorProviderFutarTelszam
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Lakcím:";
+            this.errorProviderFutarTelszam.ContainerControl = this;
             // 
-            // label4
+            // errorProviderFutarEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Telefonszam:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Email:";
+            this.errorProviderFutarEmail.ContainerControl = this;
             // 
             // FormPizzaFutarKft
             // 
@@ -702,6 +726,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFutar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPizzaPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarNev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarLakcim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarTelszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderFutarEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -770,6 +798,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider errorProviderFutarNev;
+        private System.Windows.Forms.ErrorProvider errorProviderFutarLakcim;
+        private System.Windows.Forms.ErrorProvider errorProviderFutarTelszam;
+        private System.Windows.Forms.ErrorProvider errorProviderFutarEmail;
     }
 }
 

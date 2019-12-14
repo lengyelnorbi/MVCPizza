@@ -55,8 +55,10 @@ namespace _2019TobbformosMvcPizzaEgyTabla
         private void buttonFutarMentese_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
-            //errorProviderPizzaName.Clear();
-            //errorProviderPizzaPrice.Clear();
+            errorProviderFutarNev.Clear();
+            errorProviderFutarLakcim.Clear();
+            errorProviderFutarTelszam.Clear();
+            errorProviderFutarEmail.Clear();
             try
             {
                 Futar ujFutar = new Futar(
@@ -96,13 +98,21 @@ namespace _2019TobbformosMvcPizzaEgyTabla
                 }
 
             }
-            catch (ModelPizzaNotValidNameExeption nvn)
+            catch (ModelFutarNotValidNameExeption nvn)
             {
-                //errorProviderPizzaName.SetError(textBoxPizzaNev, nvn.Message);
+                errorProviderFutarNev.SetError(textBoxFutarNev, nvn.Message);
             }
-            catch (ModelPizzaNotValidPriceExeption nvp)
+            catch (ModelFutarNotValidAddressExeption nvp)
             {
-                //errorProviderPizzaName.SetError(textBoxPizzaAr, nvp.Message);
+                errorProviderFutarLakcim.SetError(textBoxFutarLakcim, nvp.Message);
+            }
+            catch (ModelFutarNotValidPhonenumberExeption nvp)
+            {
+                errorProviderFutarTelszam.SetError(textBoxFutarTelszam, nvp.Message);
+            }
+            catch (ModelFutarNotValidEmailExeption nvp)
+            {
+                errorProviderFutarEmail.SetError(textBoxFutarEmail, nvp.Message);
             }
             catch (Exception ex)
             {
@@ -111,8 +121,10 @@ namespace _2019TobbformosMvcPizzaEgyTabla
         private void buttonFutarModosit_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
-            //errorProviderPizzaName.Clear();
-            //errorProviderPizzaPrice.Clear();
+            errorProviderFutarNev.Clear();
+            errorProviderFutarLakcim.Clear();
+            errorProviderFutarTelszam.Clear();
+            errorProviderFutarEmail.Clear();
             try
             {
                 Futar modosult = new Futar(
@@ -146,13 +158,21 @@ namespace _2019TobbformosMvcPizzaEgyTabla
                 //3. módosítani a DataGridView-ban           
                 frissitFutarAdatokkalDataGriedViewt();
             }
-            catch (ModelPizzaNotValidNameExeption nvn)
+            catch (ModelFutarNotValidNameExeption nvn)
             {
-                //errorProviderPizzaName.SetError(textBoxPizzaNev, nvn.Message);
+                errorProviderFutarNev.SetError(textBoxFutarNev, nvn.Message);
             }
-            catch (ModelPizzaNotValidPriceExeption nvp)
+            catch (ModelFutarNotValidAddressExeption nvp)
             {
-                //errorProviderPizzaName.SetError(textBoxPizzaAr, nvp.Message);
+                errorProviderFutarLakcim.SetError(textBoxFutarLakcim, nvp.Message);
+            }
+            catch (ModelFutarNotValidPhonenumberExeption nvp)
+            {
+                errorProviderFutarTelszam.SetError(textBoxFutarTelszam, nvp.Message);
+            }
+            catch (ModelFutarNotValidEmailExeption nvp)
+            {
+                errorProviderFutarEmail.SetError(textBoxFutarEmail, nvp.Message);
             }
             catch (RepositoryExceptionCantModified recm)
             {
@@ -248,8 +268,10 @@ namespace _2019TobbformosMvcPizzaEgyTabla
             buttonFutarMentese.Visible = false;
             buttonFutarMegse.Visible = false;
             panelFutarModositTorol.Visible = true;
-            errorProviderPizzaName.Clear();
-            errorProviderPizzaPrice.Clear();
+            errorProviderFutarNev.Clear();
+            errorProviderFutarLakcim.Clear();
+            errorProviderFutarTelszam.Clear();
+            errorProviderFutarEmail.Clear();
         }
         private void buttonFutarMegse_Click(object sender, EventArgs e)
         {
@@ -331,9 +353,9 @@ namespace _2019TobbformosMvcPizzaEgyTabla
         {
             if (ujFutarAdatfelvitel == false)
                 return;
-            if ((textBoxFutarNev.Text != string.Empty) &&
-                (textBoxFutarLakcim.Text != string.Empty) &&
-                (textBoxFutarTelszam.Text != string.Empty) &&
+            if ((textBoxFutarNev.Text != string.Empty) ||
+                (textBoxFutarLakcim.Text != string.Empty) ||
+                (textBoxFutarTelszam.Text != string.Empty) ||
                 (textBoxFutarEmail.Text != string.Empty))
             {
                 buttonFutarMentese.Visible = true;
